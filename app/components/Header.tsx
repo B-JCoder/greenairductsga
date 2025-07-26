@@ -34,7 +34,7 @@ export default function Header() {
               alt="Green Air Ducts Georgia"
               width={200}
               height={80}
-              className="h-10 md:h-12 w-auto"
+              className="h-10 md:h-12 w-auto rounded-none radius-2xl"
             />
           </Link>
 
@@ -102,7 +102,7 @@ export default function Header() {
               (470) 491-3855
             </a>
             <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
-              Get Free Estimate
+             <a href="tel:+14704913855">Get Free Estimate</a> 
             </button>
           </div>
 
