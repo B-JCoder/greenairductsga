@@ -10,11 +10,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <Image
-              src="/images/logo.jpeg"
+              src="/images/logo-air.png"
               alt="Green Air Ducts Georgia"
               width={200}
               height={80}
-              className="h-12 w-auto mb-4 brightness-0 invert"
+              className="h-12 w-auto mb-4 "
             />
             <p className="text-gray-300 mb-6 max-w-md">
               Georgia's premier air duct and dryer vent cleaning service. We're committed to improving your indoor air

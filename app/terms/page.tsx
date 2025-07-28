@@ -1,14 +1,14 @@
 import Footer from "../components/Footer"
 import WhatsAppButton from "../components/WhatsAppButton"
-import PageHeader from "../components/PageHeader"
+import Header from "../components/Header"
 
 export default function TermsPage() {
   return (
     <main className="min-h-screen bg-white">
-      <PageHeader />
+      <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-500 to-green-600 text-white py-20 mt-20">
+      <section className="bg-gradient-to-r from-green-950 to-green-600 text-white py-40">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Terms and Conditions</h1>

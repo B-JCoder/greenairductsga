@@ -30,7 +30,7 @@ export default function PageHeader() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.jpeg"
+              src="/images/logo-air.png"
               alt="Green Air Ducts Georgia"
               width={200}
               height={80}
