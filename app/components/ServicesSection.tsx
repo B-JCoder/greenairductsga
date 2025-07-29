@@ -17,7 +17,7 @@ const services = [
     price: "89",
   },
   {
-    icon: Building2,
+    
     title: "Commercial HVAC",
     description:
       "Large-scale commercial HVAC cleaning for businesses and facilities.",
@@ -74,12 +74,12 @@ export default function ServicesSection() {
               >
                 <div className="text-center">
                   <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 rounded-full inline-block mb-6 animate-fade-in">
-                    <IconComponent className="h-8 w-8 text-white" />
+                
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6 min-h-[72px]">{service.description}</p>
                   <div className="text-4xl font-extrabold text-green-600 mb-6">
-                    {service.price === "Quote" ? <span className="text-lg font-medium">Quote</span> : `$${service.price}`}
+                    {service.price === "Quote" ? <span className="text-3xl  font-extrabold h-8 w-8 ">Quote</span> : `$${service.price}`}
                   </div>
                   <button className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
                     Book Now
