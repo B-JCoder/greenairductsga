@@ -1,5 +1,5 @@
 import { Wind, Flame, Building2 } from "lucide-react"
-
+import Image from "next/image"
 const services = [
   {
     icon: Wind,
@@ -29,6 +29,15 @@ export default function ServicesSection() {
         <div className="text-center mb-16">
           <div className="relative">
             {/* Eye-catching "Attention Georgia!" text */}
+          <div className="relative">
+                     <Image
+                       src="/images/aboutimage.jpg"
+                       alt="Professional HVAC Technician with Certifications"
+                       width={600}
+                       height={400}
+                       className="rounded-lg shadow-lg"
+                     />
+                   </div>
             <div className="mb-6">
               <span className="inline-block bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-xl md:text-2xl font-bold shadow-lg animate-pulse">
                 🚨 ATTENTION GEORGIA! 🚨
