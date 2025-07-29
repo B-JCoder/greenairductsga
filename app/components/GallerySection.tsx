@@ -6,22 +6,24 @@ import { X } from "lucide-react"
 
 const galleryImages = [
   {
-    before: "/images/beforeafter1.jpg",
-    after: "/images/beforeafter1.jpg",
-    title: "Round Air Duct Cleaning",
-    description: "Complete removal of years of dust and debris buildup from round air ducts",
+    before: "/images/round-duct-before.jpg",
+    after: "/images/round-duct-after.jpg",
+    title: "Round Air Duct Deep Cleaning",
+    description:
+      "Complete removal of years of dust, debris, and buildup from round air ducts - see the dramatic transformation!",
   },
   {
-    before: "/images/beforeafter2.jpg",
-    after: "/images/beforeafter2.jpg",
-    title: "Rectangular Duct System Cleaning",
-    description: "Professional cleaning of rectangular duct systems removing all contaminants",
+    before: "/images/rectangular-duct-before.jpg",
+    after: "/images/rectangular-duct-after.jpg",
+    title: "Rectangular Duct System Restoration",
+    description:
+      "Professional cleaning of rectangular duct systems removing all contaminants and restoring like-new condition",
   },
   {
-    before: "/images/beforeafter3.jpg",
-    after: "/images/beforeafter3.jpg",
-    title: "Air Filter Replacement",
-    description: "Before and after comparison showing the importance of clean air filters",
+    before: "/images/air-filter-before.jpg",
+    after: "/images/air-filter-after.jpg",
+    title: "Air Filter Replacement Service",
+    description: "Before and after comparison showing the importance of regular air filter maintenance and replacement",
   },
 ]
 
@@ -36,7 +38,7 @@ export default function GallerySection() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Before & After Gallery</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             See the dramatic difference our professional cleaning services make. These real results show why Georgia
-            homeowners trust Green Air Ducts.
+            homeowners trust Green Air Ducts for their indoor air quality needs.
           </p>
         </div>
 
@@ -59,7 +61,7 @@ export default function GallerySection() {
                       className="w-full h-64 object-cover rounded-lg"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg" />
-                    <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full font-semibold">
+                    <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full font-bold shadow-lg">
                       BEFORE
                     </div>
                   </div>
@@ -76,7 +78,7 @@ export default function GallerySection() {
                       className="w-full h-64 object-cover rounded-lg"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg" />
-                    <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full font-semibold">
+                    <div className="absolute top-4 left-4 bg-green-500 text-white px-4 py-2 rounded-full font-bold shadow-lg">
                       AFTER
                     </div>
                   </div>

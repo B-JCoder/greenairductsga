@@ -30,11 +30,11 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo-air.png"
+              src="/images/logo-new.png"
               alt="Green Air Ducts Georgia"
               width={200}
               height={80}
-              className="h-10 md:h-12 w-auto rounded-none radius-2xl"
+              className="h-10 md:h-12 w-auto"
             />
           </Link>
 
@@ -102,7 +102,7 @@ export default function Header() {
               (470) 491-3855
             </a>
             <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
-             <a href="tel:+14704913855">Get Free Estimate</a> 
+              Get Free Estimate
             </button>
           </div>
 
@@ -119,30 +119,61 @@ export default function Header() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-t shadow-lg">
+            {/* Mobile Logo - Centered and Larger */}
+            <div className="flex justify-center py-6 border-b border-gray-200">
+              <Image
+                src="/images/logo-new.png"
+                alt="Green Air Ducts Georgia"
+                width={250}
+                height={100}
+                className="h-16 w-auto"
+              />
+            </div>
+
             <nav className="flex flex-col space-y-4 p-4">
-              <Link href="/" className="text-gray-700 hover:text-green-600 font-medium py-2" onClick={closeMenu}>
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-green-600 font-medium py-2 text-center"
+                onClick={closeMenu}
+              >
                 Home
               </Link>
               <Link
                 href="/services"
-                className="text-gray-700 hover:text-green-600 font-medium py-2"
+                className="text-gray-700 hover:text-green-600 font-medium py-2 text-center"
                 onClick={closeMenu}
               >
                 Services
               </Link>
-              <a href="#about" className="text-gray-700 hover:text-green-600 font-medium py-2" onClick={closeMenu}>
+              <a
+                href="#about"
+                className="text-gray-700 hover:text-green-600 font-medium py-2 text-center"
+                onClick={closeMenu}
+              >
                 About
               </a>
-              <a href="#gallery" className="text-gray-700 hover:text-green-600 font-medium py-2" onClick={closeMenu}>
+              <a
+                href="#gallery"
+                className="text-gray-700 hover:text-green-600 font-medium py-2 text-center"
+                onClick={closeMenu}
+              >
                 Gallery
               </a>
-              <a href="#contact" className="text-gray-700 hover:text-green-600 font-medium py-2" onClick={closeMenu}>
+              <a
+                href="#contact"
+                className="text-gray-700 hover:text-green-600 font-medium py-2 text-center"
+                onClick={closeMenu}
+              >
                 Contact
               </a>
-              <a href="#faq" className="text-gray-700 hover:text-green-600 font-medium py-2" onClick={closeMenu}>
+              <a
+                href="#faq"
+                className="text-gray-700 hover:text-green-600 font-medium py-2 text-center"
+                onClick={closeMenu}
+              >
                 FAQ
               </a>
-              <a href="tel:+14704913855" className="flex items-center text-green-600 font-semibold py-2">
+              <a href="tel:+14704913855" className="flex items-center justify-center text-green-600 font-semibold py-2">
                 <Phone className="h-4 w-4 mr-2" />
                 (470) 491-3855
               </a>

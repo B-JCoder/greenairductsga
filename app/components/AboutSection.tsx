@@ -9,8 +9,8 @@ export default function AboutSection() {
           {/* Image */}
           <div className="relative">
             <Image
-              src="/images/aboutimage.jpg"
-              alt="Before and After Air Duct Cleaning"
+              src="/images/about-professional.jpg"
+              alt="Professional HVAC Technician with Certifications"
               width={600}
               height={400}
               className="rounded-lg shadow-lg"
