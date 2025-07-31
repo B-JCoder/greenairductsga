@@ -24,6 +24,15 @@ const slides: SlideData[] = [
 ]
 
 export default function HeroSlider() {
+   const [isScrolled, setIsScrolled] = useState<boolean>(false)
+
+    useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
   const [currentSlide, setCurrentSlide] = useState<number>(0)
 
   useEffect(() => {
@@ -72,9 +81,16 @@ export default function HeroSlider() {
           <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 drop-shadow-md px-4">
             {slides[currentSlide].subtitle}
           </p>
-          <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105 shadow-lg">
-            Get Free Estimate
-          </button>
+                       <a
+              href="#contact"
+              className={`font-medium transition-colors hover:text-green-600 ${
+                isScrolled ? "text-gray-700" : "text-white"
+              }`}
+            >
+              <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
+              Get Free Estimate
+            </button>
+            </a>
         </div>
       </div>
 

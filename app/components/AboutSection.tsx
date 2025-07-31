@@ -1,7 +1,19 @@
+"use client"
 import Image from "next/image"
 import { CheckCircle } from "lucide-react"
+import { useEffect, useState } from "react"
 
 export default function AboutSection() {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false)
+
+    useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+  
   return (
     <section id="about" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -42,9 +54,16 @@ export default function AboutSection() {
               ))}
             </div>
 
-            <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
-              Learn More About Us
+              <a
+              href="#contact"
+              className={`font-medium transition-colors hover:text-green-600 ${
+                isScrolled ? "text-gray-700" : "text-white"
+              }`}
+            >
+              <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
+              Get Free Estimate
             </button>
+            </a>
           </div>
         </div>
       </div>

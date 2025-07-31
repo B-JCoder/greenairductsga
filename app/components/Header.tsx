@@ -101,9 +101,17 @@ export default function Header() {
               <Phone className="h-4 w-4 mr-2" />
               (470) 491-3855
             </a>
-            <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
+             <a
+              href="#contact"
+              className={`font-medium transition-colors hover:text-green-600 ${
+                isScrolled ? "text-gray-700" : "text-white"
+              }`}
+            >
+              <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
               Get Free Estimate
             </button>
+            </a>
+            
           </div>
 
           {/* Mobile Menu Button */}
