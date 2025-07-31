@@ -20,8 +20,9 @@ export default function Home() {
       <GallerySection />
       <ContactForm />
       <FAQSection />
-      <Footer />
       <WhatsAppButton />
+      <Footer />
+      
     </main>
   )
 }
