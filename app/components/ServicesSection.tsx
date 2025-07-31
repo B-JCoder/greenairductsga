@@ -44,7 +44,7 @@ export default function ServicesSection() {
           </div>
 
           <Image
-            src="/images/Attention.png"
+            src="/images/aboutimageelementair.jpg"
             alt="Professional HVAC Technician with Certifications"
             width={600}
             height={400}
