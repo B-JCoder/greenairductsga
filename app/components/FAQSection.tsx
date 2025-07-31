@@ -5,14 +5,14 @@ import { ChevronDown, ChevronUp } from "lucide-react"
 
 const faqs = [
   {
-    question: "How often should I have my air ducts cleaned?",
+    question: "What other services, besides air duct cleaning, does Element Air offer?",
     answer:
-      "We recommend having your air ducts cleaned every 3-5 years, or more frequently if you have pets, allergies, or notice excessive dust in your home. Homes with smokers or recent renovations may need more frequent cleaning.",
+      "At Element Air, we do more than just air duct cleaning. We offer dryer vent cleaning to reduce fire risks and boost dryer efficiency, gutter cleaning to protect your roof and foundation, and chimney cleaning to keep your fireplace safe and functional. We also provide mold treatment services to improve your indoor air quality and prevent health risks. Our goal is to help you maintain a cleaner, safer, and healthier home—inside and out. One trusted team for all your home maintenance needs!",
   },
   {
-    question: "What is included in your $99 air duct cleaning service?",
+    question: "What is included in your $99 air duct cleaning package?",
     answer:
-      "Our $99 service includes complete cleaning of all supply and return air ducts, registers, grilles, and diffusers. We also provide before and after photos, system inspection, and basic sanitization. Additional services like dryer vent cleaning are available.",
+      "our limited-time package includes cleaning of up to 12 vents, a full HVAC system inspection, air filter check, and a complementary deodorizer to leave your home smelling fresh.",
   },
   {
     question: "How long does the cleaning process take?",

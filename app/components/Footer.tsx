@@ -86,7 +86,7 @@ export default function Footer() {
                   href="mailto:info@greenairductsga.com"
                   className="text-gray-300 hover:text-green-400 transition-colors"
                 >
-                  info@greenairductsga.com
+                   contact.elementair.co@gmail.com
                 </a>
               </div>
               <div className="flex items-start">
