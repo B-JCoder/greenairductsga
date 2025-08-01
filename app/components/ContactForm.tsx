@@ -94,7 +94,7 @@ export default function ContactForm() {
                       href="mailto:info@greenairductsga.com"
                       className="text-green-600 hover:text-green-700 font-medium"
                     >
-                      info@greenairductsga.com
+                      contact.elementair.co@gmail.com
                     </a>
                   </div>
                 </div>
