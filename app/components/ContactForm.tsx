@@ -141,7 +141,13 @@ export default function ContactForm() {
 
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+             <form
+          onSubmit={handleSubmit}
+          action="https://formsubmit.co/bilalcodes777@gmail.com"
+          method="POST"
+          encType="multipart/form-data"
+          className="space-y-6"
+        >
               {/* Name Field */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
