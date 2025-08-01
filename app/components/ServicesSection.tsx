@@ -26,9 +26,9 @@ const services = [
   },
   {
     icon: Building2,
-    title: "Commercial HVAC",
+    title: "Available upon request",
     description:
-      "Large-scale commercial HVAC cleaning for businesses and facilities.",
+      "Large-scale services such as commercial HVAC cleaning, chimney sweeping, gutter cleaning, and other services are provided upon request for an additional fee.",
     price: "Quote",
   },
 ];
