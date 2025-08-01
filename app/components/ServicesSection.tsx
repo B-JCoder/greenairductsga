@@ -1,4 +1,4 @@
-import { Wind, Flame, Building2, Tag } from "lucide-react";
+import { Wind, Flame, Building2, Tag, AirVent } from "lucide-react";
 import Image from "next/image";
 
 const services = [
@@ -11,7 +11,7 @@ const services = [
     tag: "Most Popular",
   },
   {
-    icon: Flame,
+    icon: AirVent,
     title: "Up to 12 Vents Cleaning",
     description:
       "Professional dryer vent cleaning to prevent fires and improve efficiency.",
