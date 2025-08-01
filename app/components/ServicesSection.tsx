@@ -1,4 +1,4 @@
-import { Wind, Flame, Building2 } from "lucide-react";
+import { Wind, Flame, Building2, Tag } from "lucide-react";
 import Image from "next/image";
 
 const services = [
@@ -8,6 +8,7 @@ const services = [
     description:
       "Complete HVAC system cleaning to remove dust, allergens, and improve air quality.",
     price: "189",
+    tag: "Most Popular",
   },
   {
     icon: Flame,
@@ -24,6 +25,7 @@ const services = [
     price: "79",
   },
   {
+    icon: Building2,
     title: "Commercial HVAC",
     description:
       "Large-scale commercial HVAC cleaning for businesses and facilities.",
@@ -64,9 +66,7 @@ export default function ServicesSection() {
           </div>
 
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            <span className="font-bold text-green-600">
-              Book Yours in 2 Clicks!
-            </span>{" "}
+            <span className="font-bold text-green-600">Book Yours in 2 Clicks!</span>{" "}
             Professional air duct and dryer vent cleaning services with
             transparent, flat-rate pricing. No hidden fees, no surprises.
           </p>
@@ -81,8 +81,19 @@ export default function ServicesSection() {
                 key={index}
                 className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02]"
               >
+                 {service.tag && (
+                    <div className="bg-green-100 text-green-600 px-4 py-2 rounded-full inline-block mb-4">
+                      <Tag className="inline mr-2" />
+                      {service.tag}
+                    </div>
+                  )}
                 <div className="text-center">
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 rounded-full inline-block mb-6 animate-fade-in"></div>
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 rounded-full inline-block mb-6 animate-fade-in">
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+
+                 
+
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">
                     {service.title}
                   </h3>
@@ -91,9 +102,7 @@ export default function ServicesSection() {
                   </p>
                   <div className="text-4xl font-extrabold text-green-600 mb-6">
                     {service.price === "Quote" ? (
-                      <span className="text-3xl  font-extrabold h-8 w-8 ">
-                        Quote
-                      </span>
+                      <span className="text-3xl font-extrabold">Quote</span>
                     ) : (
                       `$${service.price}`
                     )}
