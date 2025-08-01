@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Green Air Ducts Georgia - Professional Cleaning Services",
     description:
       "Professional air duct and dryer vent cleaning services in Georgia. Get your ducts cleaned for just $99!",
-    images: ["/images/logo.jpeg"],
+    images: ["/images/logo-new.png"],
   },
 }
 
