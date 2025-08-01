@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Green Air Ducts Georgia - Professional Air Duct & Dryer Vent Cleaning",
+  title: "Element Air Ducts Georgia - Professional Air Duct & Dryer Vent Cleaning",
   description:
     "Professional air duct and dryer vent cleaning services in Georgia. Get your ducts cleaned for just $99! Improve your indoor air quality today.",
   keywords: "air duct cleaning, dryer vent cleaning, HVAC cleaning, Georgia, indoor air quality, Atlanta",
