@@ -1,59 +1,8 @@
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
 import { Phone, Mail, MapPin, Calendar, User, Send } from "lucide-react"
-import type { ContactFormData, SubmitStatus } from "../../types"
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState<ContactFormData>({
-    name: "",
-    phone: "",
-    email: "",
-    date: "",
-    location: "",
-    message: "",
-  })
-
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
-  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle")
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Simulate form submission
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-      setSubmitStatus("success")
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        date: "",
-        location: "",
-        message: "",
-      })
-    } catch (error) {
-      console.error("Form submission error:", error)
-      setSubmitStatus("error")
-    } finally {
-      setIsSubmitting(false)
-    }
-
-    // Reset status after 5 seconds
-    setTimeout(() => setSubmitStatus("idle"), 5000)
-  }
-
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -91,7 +40,7 @@ export default function ContactForm() {
                   <div>
                     <h4 className="font-semibold text-gray-800">Email</h4>
                     <a
-                      href="mailto:info@greenairductsga.com"
+                      href="mailto:contact.elementair.co@gmail.com"
                       className="text-green-600 hover:text-green-700 font-medium"
                     >
                       contact.elementair.co@gmail.com
@@ -141,13 +90,15 @@ export default function ContactForm() {
 
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-lg p-8">
-             <form
-          onSubmit={handleSubmit}
-          action="https://formsubmit.co/bilalcodes777@gmail.com"
-          method="POST"
-          encType="multipart/form-data"
-          className="space-y-6"
-        >
+            <form
+              action="https://formsubmit.co/contact.elementair.co@gmail.com"
+              method="POST"
+              encType="multipart/form-data"
+              className="space-y-6"
+            >
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+
               {/* Name Field */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -158,8 +109,6 @@ export default function ContactForm() {
                   type="text"
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                   placeholder="Enter your full name"
@@ -177,8 +126,6 @@ export default function ContactForm() {
                     type="tel"
                     id="phone"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                     placeholder="(555) 123-4567"
@@ -194,8 +141,6 @@ export default function ContactForm() {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                     placeholder="your@email.com"
@@ -214,8 +159,6 @@ export default function ContactForm() {
                     type="date"
                     id="date"
                     name="date"
-                    value={formData.date}
-                    onChange={handleChange}
                     min={new Date().toISOString().split("T")[0]}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                   />
@@ -230,8 +173,6 @@ export default function ContactForm() {
                     type="text"
                     id="location"
                     name="location"
-                    value={formData.location}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                     placeholder="Atlanta, GA"
@@ -247,8 +188,6 @@ export default function ContactForm() {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none"
                   placeholder="Tell us about your specific needs, home size, or any concerns..."
@@ -258,38 +197,11 @@ export default function ContactForm() {
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all flex items-center justify-center ${
-                  isSubmitting
-                    ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 transform hover:scale-105"
-                }`}
+                className="w-full py-4 px-6 rounded-lg font-semibold text-white transition-all flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 transform hover:scale-105"
               >
-                {isSubmitting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send className="h-5 w-5 mr-2" />
-                    Get Free Estimate
-                  </>
-                )}
+                <Send className="h-5 w-5 mr-2" />
+                Get Free Estimate
               </button>
-
-              {/* Status Messages */}
-              {submitStatus === "success" && (
-                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
-                  <strong>Success!</strong> Your request has been submitted. We'll contact you within 24 hours.
-                </div>
-              )}
-
-              {submitStatus === "error" && (
-                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg">
-                  <strong>Error!</strong> Something went wrong. Please try again or call us directly.
-                </div>
-              )}
             </form>
 
             {/* Trust Indicators */}
