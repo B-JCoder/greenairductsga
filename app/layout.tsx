@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   keywords:
     "air duct cleaning, dryer vent cleaning, HVAC cleaning, Georgia, indoor air quality, Atlanta",
   openGraph: {
-    title: "Green Air Ducts Georgia - Professional Cleaning Services",
+    title: "Element Air Ducts Georgia - Professional Cleaning Services",
     description:
       "Professional air duct and dryer vent cleaning services in Georgia. Get your ducts cleaned for just $99!",
     images: ["/images/logo-new.png"],

@@ -33,7 +33,7 @@ const services = [
       "Efficiency improvement",
       "Code compliance check",
     ],
-    price: "$89",
+    price: "$79",
     duration: "1-2 hours",
     popular: false,
   },
@@ -249,7 +249,7 @@ export default function ServicesPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Why Choose Green Air Ducts Georgia?</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Why Choose Element Air Ducts Georgia?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We're committed to providing the highest quality service and customer satisfaction
             </p>
