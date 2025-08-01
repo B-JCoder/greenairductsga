@@ -83,7 +83,7 @@ export default function Footer() {
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                 <a
-                  href="mailto:info@greenairductsga.com"
+                  href="mailto:contact.elementair.co@gmail.com"
                   className="text-gray-300 hover:text-green-400 transition-colors"
                 >
                    contact.elementair.co@gmail.com
