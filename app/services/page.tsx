@@ -1,7 +1,10 @@
+"use client"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import WhatsAppButton from "../components/WhatsAppButton"
-import { Wind, Flame, Building2, Shield, Clock, Award, CheckCircle, Star, Users, Wrench } from "lucide-react"
+import { Wind, Flame, Building2, Shield, Clock, Award, CheckCircle, Star, Users, Wrench, Phone } from "lucide-react"
+import { useState } from "react"
+import ContactForm from "../components/ContactForm"
 
 const services = [
   {
@@ -123,6 +126,7 @@ const processSteps = [
 ]
 
 export default function ServicesPage() {
+   const [isScrolled, setIsScrolled] = useState<boolean>(false)
   return (
     <main className="min-h-screen bg-white">
       <Header />
@@ -136,12 +140,27 @@ export default function ServicesPage() {
               Comprehensive air duct and HVAC cleaning services across Georgia with guaranteed results
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all">
-                Call (470) 491-3855
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all">
-                Get Free Quote
-              </button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                 <a
+              href="tel:+14704913855"
+              className={`flex items-center font-semibold transition-colors ${
+                isScrolled ? "text-white" : "text-white hover:text-green-300"
+              }`}
+            >
+              <Phone className="h-4 w-4 mr-2" />
+              (470) 491-3855
+            </a>
+             <a
+              href="#contact"
+              className={`font-medium transition-colors hover:text-green-600 ${
+                isScrolled ? "text-gray-700" : "text-white"
+              }`}
+            >
+              <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
+              Get Free Estimate
+            </button>
+            </a>
+              </div>
             </div>
           </div>
         </div>
@@ -199,9 +218,8 @@ export default function ServicesPage() {
                         <span className="text-3xl font-bold text-green-600">{service.price}</span>
                         <span className="text-gray-500">{service.duration}</span>
                       </div>
-                      <button className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
-                        Book Now
-                      </button>
+                     
+                     
                     </div>
                   </div>
                 </div>
@@ -235,9 +253,16 @@ export default function ServicesPage() {
                   <h3 className="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="text-2xl font-bold text-green-600 mb-4">{service.price}</div>
-                  <button className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
-                    Learn More
-                  </button>
+                   <a
+              href="#contact"
+              className={`font-medium transition-colors hover:text-green-600 ${
+                isScrolled ? "text-gray-700" : "text-white"
+              }`}
+            >
+              <button className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
+              Book Now
+            </button>
+            </a>
                 </div>
               )
             })}
@@ -334,7 +359,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-500 to-green-600 text-white">
+      {/* <section className="py-20 bg-gradient-to-r from-green-500 to-green-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Improve Your Indoor Air Quality?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
@@ -349,8 +374,9 @@ export default function ServicesPage() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
+<ContactForm />
       <Footer />
       <WhatsAppButton />
     </main>
