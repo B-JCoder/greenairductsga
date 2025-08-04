@@ -1,4 +1,16 @@
+"use client"
+import { useState, useEffect } from "react"
+
 export default function VideoSection() {
+   const [isScrolled, setIsScrolled] = useState<boolean>(false)
+    
+      useEffect(() => {
+        const handleScroll = () => {
+          setIsScrolled(window.scrollY > 50)
+        }
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+      }, [])
   const videos = [
     {
       id: "acCtQdQGRWs",
@@ -58,9 +70,16 @@ export default function VideoSection() {
         {/* CTA */}
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">Ready to experience these results in your home?</p>
+         <a
+              href="/#contact"
+              className={`font-medium transition-colors hover:text-green-600 ${
+                isScrolled ? "text-gray-700" : "text-white"
+              }`}
+            >
           <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
             Schedule Your Cleaning Today
           </button>
+          </a>
         </div>
       </div>
     </section>

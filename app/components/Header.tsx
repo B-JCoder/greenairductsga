@@ -102,7 +102,7 @@ export default function Header() {
               (470) 491-3855
             </a>
              <a
-              href="#contact"
+              href="/#contact"
               className={`font-medium transition-colors hover:text-green-600 ${
                 isScrolled ? "text-gray-700" : "text-white"
               }`}

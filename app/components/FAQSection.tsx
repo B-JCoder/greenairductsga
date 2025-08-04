@@ -76,9 +76,13 @@ export default function FAQSection() {
         {/* CTA */}
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">Still have questions? We're here to help!</p>
+        <a href="tel:+14704913855">
           <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
             Contact Us Today
           </button>
+        </a>
+          
+        
         </div>
       </div>
     </section>

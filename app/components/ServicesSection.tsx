@@ -1,5 +1,7 @@
-import { Wind, Flame, Building2, Tag, AirVent } from "lucide-react";
+"use client"
+import { Wind, Flame, Building2, Tag, AirVent, Phone } from "lucide-react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const services = [
   {
@@ -34,6 +36,15 @@ const services = [
 ];
 
 export default function ServicesSection() {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false)
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 50)
+      }
+      window.addEventListener("scroll", handleScroll)
+      return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
   return (
     <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -107,9 +118,16 @@ export default function ServicesSection() {
                       `$${service.price}`
                     )}
                   </div>
+                   <a
+              href="/#contact"
+              className={`font-medium transition-colors hover:text-green-600 ${
+                isScrolled ? "text-gray-700" : "text-white"
+              }`}
+            >
                   <button className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
                     Book Now
                   </button>
+                  </a>
                 </div>
               </div>
             );
@@ -129,12 +147,25 @@ export default function ServicesSection() {
                 Call now for your free estimate and same-day service!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
-                  Call (470) 491-3855
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all transform hover:scale-105">
-                  Get Free Estimate
-                </button>
+                 <a
+              href="tel:+14704913855"
+              className={`flex items-center font-semibold transition-colors ${
+                isScrolled ? "text-white" : "text-white hover:text-green-300"
+              }`}
+            >
+              <Phone className="h-4 w-4 mr-2" />
+              (470) 491-3855
+            </a>
+             <a
+              href="/#contact"
+              className={`font-medium transition-colors hover:text-green-600 ${
+                isScrolled ? "text-gray-700" : "text-white"
+              }`}
+            >
+              <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all">
+              Get Free Estimate
+            </button>
+            </a>
               </div>
             </div>
           </div>
