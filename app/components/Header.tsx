@@ -57,7 +57,7 @@ export default function Header() {
               Services
             </Link>
             <a
-              href="#about"
+              href="/#about"
               className={`font-medium transition-colors hover:text-green-600 ${
                 isScrolled ? "text-gray-700" : "text-white"
               }`}
@@ -65,7 +65,7 @@ export default function Header() {
               About
             </a>
             <a
-              href="#gallery"
+              href="/#gallery"
               className={`font-medium transition-colors hover:text-green-600 ${
                 isScrolled ? "text-gray-700" : "text-white"
               }`}
@@ -73,7 +73,7 @@ export default function Header() {
               Gallery
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className={`font-medium transition-colors hover:text-green-600 ${
                 isScrolled ? "text-gray-700" : "text-white"
               }`}
@@ -81,7 +81,7 @@ export default function Header() {
               Contact
             </a>
             <a
-              href="#faq"
+              href="/#faq"
               className={`font-medium transition-colors hover:text-green-600 ${
                 isScrolled ? "text-gray-700" : "text-white"
               }`}
@@ -154,28 +154,28 @@ export default function Header() {
                 Services
               </Link>
               <a
-                href="#about"
+                href="/#about"
                 className="text-gray-700 hover:text-green-600 font-medium py-2 text-center"
                 onClick={closeMenu}
               >
                 About
               </a>
               <a
-                href="#gallery"
+                href="/#gallery"
                 className="text-gray-700 hover:text-green-600 font-medium py-2 text-center"
                 onClick={closeMenu}
               >
                 Gallery
               </a>
               <a
-                href="#contact"
+                href="/#contact"
                 className="text-gray-700 hover:text-green-600 font-medium py-2 text-center"
                 onClick={closeMenu}
               >
                 Contact
               </a>
               <a
-                href="#faq"
+                href="/#faq"
                 className="text-gray-700 hover:text-green-600 font-medium py-2 text-center"
                 onClick={closeMenu}
               >
