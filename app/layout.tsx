@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Affordable and professional air duct and dryer vent cleaning services across Georgia. Schedule your $99 duct cleaning today!",
     images: [
       {
-        url: "/favicon-removebg-preview.ico",
+        url: "/images/logo-new.png",
         alt: "Element Air Ducts Georgia Logo",
       },
     ],
