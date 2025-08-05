@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://elementairusa.com
+
+# Sitemaps
+Sitemap: https://elementairusa.com/sitemap.xml
