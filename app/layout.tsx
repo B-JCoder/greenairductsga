@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.elementairusa.com"), // Replace with your real domain
+  metadataBase: new URL("https://www.elementairusa.com"),
 
   title: "Element Air Ducts Georgia | Best Air Duct & Dryer Vent Cleaning Services",
   description:
@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 openGraph: {
     title: "Element Air Ducts Georgia - Professional Cleaning Services",
     description: "Professional air duct and dryer vent cleaning services in Georgia. Get your ducts cleaned for just $99!",
-    images: ["/images/logo-new.png"], // relative path is okay now
+    images: ["/favicon-removebg-preview.ico"], 
   },
    twitter: {
     card: "summary_large_image",
     title: "Element Air Ducts Georgia",
-    images: ["/images/logo-new.png"],
+    images: ["/favicon-removebg-preview.ico"],
   },
   icons: {
     icon: "/favicon-removebg-preview.ico",
