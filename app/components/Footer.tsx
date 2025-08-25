@@ -29,10 +29,10 @@ export default function Footer() {
               >
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
+              {/* <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
                 <Twitter className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
+              </a> */}
+              <a href="https://www.instagram.com/elementairusa/" className="text-gray-300 hover:text-green-400 transition-colors">
                 <Instagram className="h-6 w-6" />
               </a>
             </div>
